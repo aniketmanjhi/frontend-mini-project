@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="password__generator-container">
+        <form id="form">
+          <div class="password__length-container">
+            <input
+              type="number"
+              id="number"
+              class="password__length-input"
+              name="password_length"
+            />
+            <span class="password__length-label">Password length</span>
+          </div>
+          <div class="password__options-container">
+            <input
+              type="checkbox"
+              id="password__option-uppercase"
+              name="checkbox_uppercase"
+            />
+            <label for="password__option-uppercase">Add Uppercase</label>
+          </div>
+          <div class="password__options-container">
+            <input
+              type="checkbox"
+              id="password__option-lowercase"
+              name="checkbox_lowercase"
+            />
+            <label for="password__option-lowercase">Add Lowercase</label>
+          </div>
+          <div class="password__options-container">
+            <input
+              type="checkbox"
+              id="password__option-number"
+              name="checkbox_number"
+            />
+            <label for="password__option-number">Add Number</label>
+          </div>
+          <div class="password__options-container">
+            <input
+              type="checkbox"
+              id="password__option-symbol"
+              name="checkbox_symbol"
+            />
+            <label for="password__option-symbol">Add Symbol</label>
+          </div>
+          <button type="submit" class="generated__password-btn">
+            Generate
+          </button>
+        </form>
+        <div class="generated__password hidden"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

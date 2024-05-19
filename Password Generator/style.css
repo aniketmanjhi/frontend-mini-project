@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top left,
+    rgb(221, 72, 214),
+    rgb(105, 57, 160)
+  );
+}
+.password__generator-container {
+  background-color: rgba(255, 255, 255, 0.788);
+  padding: 1.2rem;
+  border-radius: 20px;
+  width: 500px;
+}
+#form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.password__length-container {
+  grid-column: 1 / 3;
+  position: relative;
+}
+.password__length-input {
+  width: 200px;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  color: rgb(41, 41, 41);
+}
+.password__length-input:focus,
+.password__length-input:valid {
+  border: none;
+  outline: none;
+}
+.password__length-input::-webkit-inner-spin-button,
+.password__length-input::-webkit-outer-spin-button {
+  appearance: none;
+}
+.password__length-label {
+  position: absolute;
+  font-size: 1rem;
+  top: 25%;
+  left: 3%;
+  font-weight: 600;
+  pointer-events: none;
+  color: gray;
+  transition: all 0.2s linear;
+}
+.password__length-input:focus + .password__length-label,
+.password__length-input:valid + .password__length-label {
+  top: -25%;
+  font-size: 0.8rem;
+  color: rgb(41, 41, 41);
+}
+
+.generated__password-btn {
+  grid-column: 1 / 3;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  color: rgb(51, 51, 51);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.generated__password-btn:hover {
+  background-color: white;
+}
+
+/* generated__password */
+.generated__password {
+  max-width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  color: rgb(41, 41, 41);
+  font-weight: 600;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
